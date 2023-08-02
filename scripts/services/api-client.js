@@ -20,8 +20,16 @@
 //              networkcalling
 
 async function doNetworkCall(){
-
-}
+    const URL = "https://raw.githubusercontent.com/Skill-risers/pizzajson/main/pizza.json";
+    try{
+    const response = await fetch(URL);
+    const obj = await response.json();
+    return obj;
+    }
+    catch(err){
+        throw err;
+    }
+}export default doNetworkCall;
 
 
 
