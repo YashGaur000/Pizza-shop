@@ -19,18 +19,31 @@
  
 //              networkcalling
 
+// async function doNetworkCall(){
+//     const URL = "https://raw.githubusercontent.com/Skill-risers/pizzajson/main/pizza.json";
+//     try{
+//     const response = await fetch(URL);
+//     const obj = await response.json();
+//     return obj;
+//     }
+//     catch(err){ 
+//         throw err;
+//     }
+// }export default doNetworkCall;
+
 async function doNetworkCall(){
-    const URL = "https://raw.githubusercontent.com/Skill-risers/pizzajson/main/pizza.json";
+    console.log('Fn Starts');
+    const URL = 'https://raw.githubusercontent.com/Skill-risers/pizzajson/main/pizza.json';
     try{
-    const response = await fetch(URL);
-    const obj = await response.json();
-    return obj;
-    }
+    const response = await fetch(URL); // Header + Body
+    const obj = await response.json(); // JSON Convert into Object (DeSerialization)
+    return obj;  //  Wrap in Promise   
+}
     catch(err){
         throw err;
     }
-}export default doNetworkCall;
-
+}
+export default doNetworkCall;
 
 
 
