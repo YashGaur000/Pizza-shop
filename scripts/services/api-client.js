@@ -33,7 +33,7 @@
 
 async function doNetworkCall(){
     console.log('Fn Starts');
-    const URL = 'https://raw.githubusercontent.com/Skill-risers/pizzajson/main/pizza.json';
+    const URL = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=0087737a84394e4f93eafb9bed4d9da5';
     try{
     const response = await fetch(URL); // Header + Body
     const obj = await response.json(); // JSON Convert into Object (DeSerialization)

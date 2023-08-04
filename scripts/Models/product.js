@@ -1,13 +1,11 @@
 // create the class which represent the product object
 
 class Product{
-    constructor(id, name, desc, price, url){
-        this.id=id;
-        this.name=name;
-        this.desc=desc;
-        this.price=price;
+    constructor(title, publishedTime, urlToImage, url){
+        this.title=title;
+        this.publishedTime=publishedTime;
+        this.urlToImage=urlToImage;
         this.url=url;
-
     }
 }
 export default Product;
